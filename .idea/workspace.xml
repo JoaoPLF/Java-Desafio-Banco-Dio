@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d18f976-8eb7-4a80-8928-54ea45df3f42" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/banco/Banco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/banco/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/banco/Conta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/banco/ContaCorrente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/banco/ContaPoupanca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/dio/banco/ContaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="4d18f976-8eb7-4a80-8928-54ea45df3f42" name="Changes" comment="Cria testes para Conta, cria exemplo em Main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dio/banco/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +62,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663710528614</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adiciona classes Banco, Cliente, Conta, ContaCorrente e ContaPoupanca">
+      <created>1663719828517</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663719828517</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Cria testes para Conta, cria exemplo em Main">
+      <created>1663719861584</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663719861584</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +92,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="Adiciona classes Banco, Cliente, Conta, ContaCorrente e ContaPoupanca" />
+    <MESSAGE value="Cria testes para Conta, cria exemplo em Main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cria testes para Conta, cria exemplo em Main" />
   </component>
 </project>

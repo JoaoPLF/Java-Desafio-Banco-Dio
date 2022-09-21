@@ -1,11 +1,9 @@
 package br.com.dio.banco;
 
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
         Banco banco = new Banco("Banco Digital");
-        Cliente cliente1 = new Cliente("Joao");
+        Cliente cliente1 = banco.cadastrarCliente("Joao");
         Conta corrente = banco.criarContaCorrente(cliente1);
         Conta poupanca = banco.criarContaPoupanca(cliente1);
 
@@ -15,9 +13,6 @@ public class Main {
         corrente.imprimirExtrato();
         poupanca.imprimirExtrato();
 
-        List<Cliente> clientes = banco.getClientes();
-        for (Cliente c : clientes) {
-            System.out.println(c.getNome());
-        }
+        banco.imprimirContasTodosClientes();
     }
 }

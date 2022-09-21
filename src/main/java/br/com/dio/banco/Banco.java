@@ -1,45 +1,47 @@
 package br.com.dio.banco;
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Banco {
-    private String nome;
-    private List<Conta> contas;
+    private final String nome;
+    private Set<Cliente> clientes;
 
     public Banco(String nome) {
         this.nome = nome;
-        contas = new ArrayList<>();
+        clientes = new HashSet<>();
     }
 
     public String getNome() {
         return nome;
     }
 
-    public List<Cliente> getClientes() {
-        List<Cliente> clientes = new ArrayList<>();
-
-        for (Conta conta : contas) {
-            clientes.add(conta.getCliente());
-        }
-
+    public Set<Cliente> getClientes() {
         return clientes;
     }
 
+    public void imprimirContasTodosClientes() {
+        for (Cliente cliente : clientes) {
+            System.out.println("*** " + cliente.getNome() + " ***");
+            cliente.imprimirContas();
+        }
+    }
+
+    public Cliente cadastrarCliente(String nome) {
+        Cliente cliente = new Cliente(nome);
+        clientes.add(cliente);
+        return cliente;
+    }
+
     public Conta criarContaCorrente(Cliente cliente) {
-        Conta conta = new ContaCorrente(cliente);
-        adicionaContaNaLista(conta);
+        Conta conta = new ContaCorrente();
+        cliente.adicionarConta(conta);
         return conta;
     }
 
     public Conta criarContaPoupanca(Cliente cliente) {
-        Conta conta = new ContaPoupanca(cliente);
-        adicionaContaNaLista(conta);
+        Conta conta = new ContaPoupanca();
+        cliente.adicionarConta(conta);
         return conta;
-    }
-
-    private void adicionaContaNaLista(Conta conta) {
-        contas.add(conta);
     }
 }

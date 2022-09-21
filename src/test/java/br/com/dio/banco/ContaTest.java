@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 public class ContaTest {
+    static Banco banco;
     static Cliente cliente;
     static Conta corrente;
     static Conta poupanca;
@@ -13,9 +14,10 @@ public class ContaTest {
 
     @BeforeAll
     static void inicializaVariaveis() {
-        cliente = new Cliente("Joao");
-        corrente = new ContaCorrente(cliente);
-        poupanca = new ContaPoupanca(cliente);
+        banco = new Banco("Banco Digital");
+        cliente = banco.cadastrarCliente("Joao");
+        corrente = banco.criarContaCorrente(cliente);
+        poupanca = banco.criarContaPoupanca(cliente);
     }
 
     @Test

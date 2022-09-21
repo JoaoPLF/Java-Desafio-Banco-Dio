@@ -6,35 +6,33 @@ public abstract class Conta {
     protected int agencia;
     protected int numeroConta;
     protected double saldo;
-    private Cliente cliente;
 
-    public Conta(Cliente cliente) {
+    public abstract void imprimirExtrato();
+    public abstract String getTipoConta();
+
+    public Conta() {
         agencia = AGENCIA_PADRAO;
         numeroConta = SEQUENCIA_NUMERO_CONTA++;
         saldo = 0d;
-        this.cliente = cliente;
     }
 
     public void depositar(double valor) {
         saldo += valor;
-    };
+    }
 
     public void sacar(double valor) {
         saldo -= valor;
-    };
+    }
 
     public void transferir(double valor, Conta destino) {
         this.sacar(valor);
         destino.depositar(valor);
-    };
+    }
 
     protected void imprimirInfoConta() {
-        System.out.println("Titular: " + cliente.getNome());
         System.out.println("Agencia: " + agencia + "    Conta: " + numeroConta);
         System.out.println(String.format("Saldo: R$ %.2f", saldo));
     }
-
-    public abstract void imprimirExtrato();
 
     public int getAgencia() {
         return agencia;
@@ -46,9 +44,5 @@ public abstract class Conta {
 
     public double getSaldo() {
         return saldo;
-    }
-
-    public Cliente getCliente() {
-        return cliente;
     }
 }
